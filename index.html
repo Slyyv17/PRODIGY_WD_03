@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-tac-toe web app</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100"> <!-- Changed background color of body -->
+    <div class="flex flex-col items-center justify-center w-full mx-auto bg-white border border-blue-500 h-fit"> <!-- Updated border and background color -->
+        <!-- Game Mode Selection -->
+        <div class="p-2 mb-4 text-center">
+            <h3 class="text-xl font-bold">Select Game Mode</h3>
+            <select id="game-mode" class="p-2 border border-none shadow-md ">
+                <option value="pvp">Player vs Player</option>
+                <option value="pve">Player vs AI</option>
+            </select>
+        </div>
+
+        <div class="p-2 mb-4 text-center">
+            <h2 class="text-xl font-bold"> Select max wins </h2>
+            <input class="w-auto h-5 border border-black resize-none" type="number" id="max-value">
+        </div>
+        
+        <div class="grid grid-cols-3 gap-4 m-10 border border-none"> <!-- Updated grid container -->
+            <div class="flex items-center justify-center w-24 h-24 p-2 text-4xl font-bold text-center text-white bg-blue-200 border border-blue-200 rounded-lg font-pryFF cell"></div>
+            <div class="flex items-center justify-center w-24 h-24 p-2 text-4xl font-bold text-center text-white bg-blue-200 border border-blue-200 rounded-lg font-pryFF cell"></div>
+            <div class="flex items-center justify-center w-24 h-24 p-2 text-4xl font-bold text-center text-white bg-blue-200 border border-blue-200 rounded-lg font-pryFF cell"></div>
+            <div class="flex items-center justify-center w-24 h-24 p-2 text-4xl font-bold text-center text-white bg-blue-200 border border-blue-200 rounded-lg font-pryFF cell"></div>
+            <div class="flex items-center justify-center w-24 h-24 p-2 text-4xl font-bold text-center text-white bg-blue-200 border border-blue-200 rounded-lg font-pryFF cell"></div>
+            <div class="flex items-center justify-center w-24 h-24 p-2 text-4xl font-bold text-center text-white bg-blue-200 border border-blue-200 rounded-lg font-pryFF cell"></div>
+            <div class="flex items-center justify-center w-24 h-24 p-2 text-4xl font-bold text-center text-white bg-blue-200 border border-blue-200 rounded-lg font-pryFF cell"></div>
+            <div class="flex items-center justify-center w-24 h-24 p-2 text-4xl font-bold text-center text-white bg-blue-200 border border-blue-200 rounded-lg font-pryFF cell"></div>
+            <div class="flex items-center justify-center w-24 h-24 p-2 text-4xl font-bold text-center text-white bg-blue-200 border border-blue-200 rounded-lg font-pryFF cell"></div>
+        </div>
+
+        <div class="mb-4 text-center">
+            <h3 class="text-xl font-bold">Score</h3>
+            <p id="score-x" class="text-lg">Player X: 0</p>
+            <p id="score-o" class="text-lg">Player O: 0</p>
+        </div>
+
+        <div>
+            <button class="w-auto p-2 text-white bg-blue-300 border border-blue-500 hover:bg-blue-400 h-fit restart">Reset Game </button> <!-- Updated button colors -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
